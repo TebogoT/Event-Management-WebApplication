@@ -1,0 +1,19 @@
+.login-container{
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+    margin: 40px;
+}
+
+.card{
+    border:none;
+    border-radius:15px;
+}
+
+.card-title{
+    font-weight:700;
+}
+
+.btn-primary{
+    margin-top:10px;
+}
