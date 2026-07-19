@@ -11,7 +11,7 @@ const Register = () => {
   // Hook used to navigate to another page after successful registration
   const navigate = useNavigate();
 
-   // Initialize Formik to manage the login form
+   // Initialize Formik to manage the Registration form
   const formik = useFormik({
 
     // Initial values for all registration form fields. Formik uses these to keep track of the user's input
