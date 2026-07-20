@@ -1,4 +1,6 @@
 import React from 'react'
+import {useContext} from 'react'
+import { UserContext } from '../context/UserContext.jsx'
 import { useNavigate, Link } from 'react-router-dom'
 import { useFormik } from 'formik'
 import NavigationBar from '../components/NavigationBar.jsx'
@@ -11,6 +13,8 @@ const Register = () => {
   // Hook used to navigate to another page after successful registration
   const navigate = useNavigate();
 
+  const { registerUser } = useContext(UserContext);
+
    // Initialize Formik to manage the Registration form
   const formik = useFormik({
 
@@ -19,8 +23,7 @@ const Register = () => {
       fullName: '',
       surname: '',
       email: '',
-      password: '',
-      confirmPassword: ''
+      password: ''
     },
 
     // Validate the form values to ensure that the input fields are not empty and that the email is in a valid format, it does this by checking if the email and password values are empty and if the email value matches a regular expression for a valid email format
@@ -28,13 +31,13 @@ const Register = () => {
       const errors = {};
       if (!values.fullName) {
         errors.fullName = 'Full name is required';
-      } else if (values.fullName.length >10) {
+      } else if (values.fullName.length >50) {
         errors.fullName = 'Full name shoud not exceed 10 characters'
       }
 
       if (!values.surname) {
         errors.surname = 'Surname is required';
-      } else if (values.surname.length >20) {
+      } else if (values.surname.length >50) {
         errors.surname = 'Full name shoud not exceed 20 characters'
       }
 
@@ -67,15 +70,16 @@ const Register = () => {
   
     onSubmit: (values) => {
 
-      // Save the registered user's details in localStorage.
-      localStorage.setItem('user', JSON.stringify(values));
 
-      // Inform the user that registration was successful.
-      //REMOVED, AFTER REGISTRATION AFTER TAKING ME TO THE LOGIN PAGE I WAS UNABLE TO CLICK IN THE INPUT
-      //alert('Registration successful! Please log in.');
+      const { confirmPassword, ...userData } = values;
 
-      // Redirect the user to the Login page.
-      navigate('/login');
+      const result = registerUser(userData);
+
+        if(result.success){
+            navigate("/login");
+        }else{
+            alert(result.message);
+        }
     }
   });
 
