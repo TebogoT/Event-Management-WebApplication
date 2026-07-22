@@ -23,7 +23,8 @@ const Register = () => {
       fullName: '',
       surname: '',
       email: '',
-      password: ''
+      password: '',
+      confirmPassword: ''
     },
 
     // Validate the form values to ensure that the input fields are not empty and that the email is in a valid format, it does this by checking if the email and password values are empty and if the email value matches a regular expression for a valid email format
