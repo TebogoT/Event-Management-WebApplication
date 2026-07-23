@@ -1,5 +1,5 @@
 import React from 'react'
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 
 
 export const EventContext = createContext();
@@ -8,16 +8,8 @@ export function EventProvider({ children }) {
     //used to handle the addEvent function
     const [events, setEvents] = useState([]);
 
-    //used to handle the deleteEvent function
-    const { deleteEvent } = useContext(EventContext);
-    <Button
-        variant="danger"
-        onClick={() => deleteEvent(event.id)}
-    >
-        Delete
-    </Button>
+    const { addEvent, updateEvent } = useContext(EventContext);
 
-    const { updateEvent } = useContext(EventContext);
 
     //USED TO LOOK INTO LOCALSTORAGE IF "EVENTS" EXIST, IF IT DOES IT LOADS IT
     useEffect(() => {
@@ -36,24 +28,10 @@ export function EventProvider({ children }) {
         );
     }, [events]);
 
-    return (
-        <EventContext.Provider
-        value={{
-            events,
-            addEvent,
-            deleteEvent,
-            updateEvent
-
-        }}
-        >
-        {children}
-        </EventContext.Provider>
-
-    )
-
     ///FUNCTION TO ADD A NEW EVENT
     function addEvent(newEvent) {
         setEvents(previousEvents => [
+            // builds an array by showing all events that are e.g in the box and afterwards add another event to the e.g box
         ...previousEvents,
         newEvent
 
@@ -85,15 +63,22 @@ export function EventProvider({ children }) {
         );
     }
 
-}
 
+    return (
+        <EventContext.Provider
+        value={{
+            events,
+            addEvent,
+            deleteEvent,
+            updateEvent
 
-const EventContext = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+        }}
+        >
+        {children}
+        </EventContext.Provider>
+
+    )
+
 }
 
 export default EventContext

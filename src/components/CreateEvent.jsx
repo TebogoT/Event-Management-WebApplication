@@ -1,28 +1,25 @@
 import React from 'react'
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { EventContext } from "../context/EventContext";
 
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 
-const CreateEvent = () => {
+const CreateEvent = ({onClose, event}) => {
 
     //Allow to create events
     const { addEvent } = useContext(EventContext);
-
-    const navigate = useNavigate();
 
 
     //Using Formik to create evet card parameters for the form
     const formik = useFormik({
     initialValues: {
-        title: "",
-        date: "",
-        time: "",
-        location: "",
-        category: "",
-        description: ""
+        title: event ? event.title: "",
+        date: event ? event.date: "",
+        time: event ? event.time: "",
+        location: event ? event.location: "",
+        category: event ? event.category: "",
+        description: event ? event.description: ""
 
     },
 
@@ -59,12 +56,18 @@ const CreateEvent = () => {
     },
 
     onSubmit: values => {
-        const newEvent = {
-            id: Date.now(),
-            ...values
-        };
-        addEvent(newEvent);
-        navigate("/dashboard");
+        if (event) {
+            updateEvent({
+                ...event,
+                ...values
+            });
+        } else {
+            addEvent({
+                id:Date.now()
+                ...values
+            })
+        }
+        onClose();
     }
 
 });
@@ -174,7 +177,7 @@ const CreateEvent = () => {
                                     <Form.Control
                                     as="textarea"
                                     rows={4}
-                                    name="location"
+                                    name="description"
                                     value={formik.values.description}
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
@@ -186,10 +189,17 @@ const CreateEvent = () => {
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Button
-                                type="submit"
-                                className="w-100"
+                                    type="submit"
+                                    className="w-100"
                                 >
-                                Create Event
+                                    Create Event
+                                </Button>
+                                <Button
+                                    variant="secondary"
+                                    className="w-100 mt-2"
+                                    onClick={onClose}
+                                >
+                                    Cancel
                                 </Button>
                             </Form>
                     </Card.Body>
