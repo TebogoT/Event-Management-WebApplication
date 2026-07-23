@@ -3,7 +3,6 @@ import {useContext} from 'react'
 import { UserContext } from '../context/UserContext.jsx'
 import { useNavigate, Link } from 'react-router-dom'
 import { useFormik } from 'formik'
-import NavigationBar from '../components/NavigationBar.jsx'
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap'
 import './login.css'
 
@@ -33,13 +32,13 @@ const Register = () => {
       if (!values.fullName) {
         errors.fullName = 'Full name is required';
       } else if (values.fullName.length >50) {
-        errors.fullName = 'Full name shoud not exceed 10 characters'
+        errors.fullName = 'Full name shoud not exceed 50 characters'
       }
 
       if (!values.surname) {
         errors.surname = 'Surname is required';
       } else if (values.surname.length >50) {
-        errors.surname = 'Full name shoud not exceed 20 characters'
+        errors.surname = 'Full name shoud not exceed 50 characters'
       }
 
       if (!values.email) {
@@ -54,7 +53,7 @@ const Register = () => {
       if (!values.password) {
         errors.password = 'Password is required';
       } else if (
-        !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(values.password)
+        !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$/.test(values.password)
       ) {
         errors.password =
           'Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number and one special character.';
@@ -71,8 +70,12 @@ const Register = () => {
   
     onSubmit: (values) => {
 
-
-      const { confirmPassword, ...userData } = values;
+      const userData = {
+        fullName: values.fullName.trim(),
+        surname: values.surname.trim(),
+        email: values.email.trim(),
+        password: values.password
+      }
 
       const result = registerUser(userData);
 
@@ -86,7 +89,6 @@ const Register = () => {
 
   return (
     <div>
-      <NavigationBar />
       <Container className="login-page">
         <Row className="justify-content-center">
           <Col md={6}>

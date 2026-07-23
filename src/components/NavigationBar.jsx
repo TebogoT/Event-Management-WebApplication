@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { useContext } from "react"
 import {UserContext} from "../context/UserContext"
 import './NavigationBar.css'
@@ -15,6 +15,7 @@ const NavigationBar = () => {
                 <ul>
                     <li>
                         <NavLink to="/" className="navLink">Home</NavLink>
+
                     </li>
                     <li>
                         <NavLink to="/dashboard" className="navLink">Dashboard</NavLink>

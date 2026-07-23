@@ -51,7 +51,7 @@ const Login = () => {
 
       if (success) {
         setLoginError("")
-          navigate("/Home");
+          navigate("/dashboard");
       } else {
         
         setLoginError("Invalid email or password.");
@@ -61,7 +61,6 @@ const Login = () => {
 
   return (
     <div>
-      <NavigationBar />
       <Container className="login-page">
         <Row className="justify-content-center">
           <Col md={6}>
@@ -80,7 +79,7 @@ const Login = () => {
                       name="email" 
                       value={formik.values.email} 
                       onChange={ (e) => {
-                        formik.handleChange;
+                        formik.handleChange(e);
                         setLoginError("");
                       }}
                       onBlur={formik.handleBlur} 
@@ -100,7 +99,7 @@ const Login = () => {
                       name="password" 
                       value={formik.values.password} 
                       onChange={ (e) => {
-                        formik.handleChange;
+                        formik.handleChange(e);
                         setLoginError("");
                       }} 
                       onBlur={formik.handleBlur} 

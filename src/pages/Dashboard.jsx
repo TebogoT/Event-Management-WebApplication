@@ -1,8 +1,8 @@
 import React from 'react'
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { EventContext } from "../context/EventContext";
 import CreateEvent from "../components/CreateEvent";
-
+import EventCard from "../components/EventCard";
 
 
 const Dashboard = () => {
@@ -25,14 +25,28 @@ const Dashboard = () => {
             >
                 Add Event
             </button>
-
-
             {/*if showCreateEvent is "true" display "CreateEvent,jsx" */}
             {
             showCreateEvent && (
             <CreateEvent
+                event={selectedEvent}
                 onClose={() => setShowCreateEvent(false)}
             />
+            )}
+
+             {events.length === 0 ? (
+                <p>No events have been created yet.</p>
+            ) : (
+                events.map((event) => (
+                    <EventCard
+                        key={event.id}
+                        event={event}
+                        onEdit={() => {
+                            setSelectedEvent(event);
+                            setShowCreateEvent(true);
+                        }}
+                    />
+                ))
             )}
         
         </div>

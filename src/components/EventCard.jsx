@@ -1,15 +1,15 @@
 import React from 'react'
 import { Card, Button } from "react-bootstrap";
-import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap'
+import { useContext } from "react";
+import { EventContext } from "../context/EventContext";
 
-const EventCard = ({event}) => {
 
-  events.map((event) => (
-    <EventCard
-    key={event.id}
-    event={event}
-    />
-  ))
+
+const EventCard = ({event, onEdit}) => {
+
+  //GIVING "EventCard" ACCESS TO DELETE
+  const { deleteEvent } = useContext(EventContext);
+
 
 
   return (
@@ -50,12 +50,22 @@ const EventCard = ({event}) => {
         </Card.Text>
 
         {/*BUTTONS OF THE CARD*/}
-        <Button variant="warning">
+        <Button
+         variant="warning"
+         onClick={onEdit}>
           Edit
         </Button>
         <Button
           variant="danger"
           className="ms-2"
+          onClick={() => {
+            const confirmDelete = window.confirm (
+              "Are you sure you want to delete this event?"
+            );
+            if (confirmDelete) {
+              deleteEvent(event.id);
+            }
+          }}  
         >
           Delete
         </Button>

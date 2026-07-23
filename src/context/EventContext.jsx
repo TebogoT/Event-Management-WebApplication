@@ -8,8 +8,6 @@ export function EventProvider({ children }) {
     //used to handle the addEvent function
     const [events, setEvents] = useState([]);
 
-    const { addEvent, updateEvent } = useContext(EventContext);
-
 
     //USED TO LOOK INTO LOCALSTORAGE IF "EVENTS" EXIST, IF IT DOES IT LOADS IT
     useEffect(() => {

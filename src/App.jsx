@@ -16,7 +16,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
   return (
-    <div>
+    <>
       <NavigationBar />
       <Routes>
         {/*Public Routes*/}
@@ -32,7 +32,7 @@ const App = () => {
           <Route path="/dashboard" element = {<Dashboard/>}/>
         </Route>
       </Routes>
-    </div>
+    </>
   )
 }
 
