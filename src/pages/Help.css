@@ -1,0 +1,57 @@
+.help-page{
+    min-height:calc(100vh - 76px);
+}
+
+.help-title{
+    color:var(--primary-green);
+    font-weight:700;
+}
+
+.help-subtitle{
+    color:#666;
+    max-width:700px;
+    margin:auto;
+}
+
+.help-card{
+    border:none;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+    height:100%;
+}
+
+.help-card:hover{
+    transform:translateY(-6px);
+}
+
+.help-card h4{
+    color:var(--primary-gold);
+    margin-bottom:15px;
+}
+
+.help-card p{
+    color:#555;
+    line-height:1.7;
+}
+
+.accordion-item{
+    border:none;
+    margin-bottom:12px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+.accordion-button{
+    font-weight:600;
+}
+
+.accordion-button:not(.collapsed){
+    background:#eef6f1;
+    color:var(--primary-green);
+}
+
+.accordion-button:focus{
+    box-shadow:none;
+}
