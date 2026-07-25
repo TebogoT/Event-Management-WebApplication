@@ -1,5 +1,5 @@
 import React from 'react'
-import PublicEventCard from "../components/PublicEventCard";
+import PublicEvents from "../components/PublicEvents";
 import { Container, Row, Col } from "react-bootstrap";
 import { useContext } from "react";
 import { EventContext } from "../context/EventContext";
