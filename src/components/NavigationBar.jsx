@@ -57,6 +57,10 @@ const NavigationBar = () => {
                             Contact Us
                         </Nav.Link>
 
+                        <Nav.Link as={NavLink} to="/help">
+                            Help
+                        </Nav.Link>
+
                     </Nav>
 
                     {/* Right Navigation */}

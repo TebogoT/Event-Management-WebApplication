@@ -1,57 +1,69 @@
 .help-page{
-    min-height:calc(100vh - 76px);
+
+    padding:40px 20px;
+
 }
 
-.help-title{
+.help-page h1{
+
     color:var(--primary-green);
-    font-weight:700;
+
+    margin-bottom:15px;
+
 }
 
-.help-subtitle{
+.help-page p{
+
     color:#666;
-    max-width:700px;
-    margin:auto;
+
 }
 
 .help-card{
+
     border:none;
-    border-radius:16px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-    height:100%;
+
+    border-radius:10px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.help-card .card-body{
+
+    padding:20px;
+
+}
+
+.help-card .card-title{
+
+    color:var(--primary-gold);
+
 }
 
 .help-card:hover{
-    transform:translateY(-6px);
-}
 
-.help-card h4{
-    color:var(--primary-gold);
-    margin-bottom:15px;
-}
+    transform:translateY(-5px);
 
-.help-card p{
-    color:#555;
-    line-height:1.7;
-}
+    transition:.3s;
 
-.accordion-item{
-    border:none;
-    margin-bottom:12px;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.06);
 }
 
 .accordion-button{
+
     font-weight:600;
+
 }
 
 .accordion-button:not(.collapsed){
-    background:#eef6f1;
+
+    background:#f5f5f5;
+
     color:var(--primary-green);
+
 }
 
-.accordion-button:focus{
-    box-shadow:none;
+.accordion-body{
+
+    color:#555;
+
 }

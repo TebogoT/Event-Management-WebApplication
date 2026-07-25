@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact"
 import NavigationBar from "./components/NavigationBar";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Help from "./pages/Help";
 
 
 const App = () => {
@@ -21,12 +22,13 @@ const App = () => {
       <NavigationBar />
       <Routes>
         {/*Public Routes*/}
+        <Route path="/welcome" element = {<WelcomeScreen/>}/>
         <Route path="/" element = {<Home/>}/>
         <Route path="/login" element = {<Login/>}/>
         <Route path="/register" element = {<Register/>}/>
         <Route path="/about" element = {<About/>}/>
         <Route path="/contact" element = {<Contact/>}/>
-        <Route path="/welcome" element = {<WelcomeScreen/>}/>
+        <Route path="/help" element = {<Help/>}/>
 
         {/*Protected Routes*/}
         <Route element = {<ProtectedRoute/>}>

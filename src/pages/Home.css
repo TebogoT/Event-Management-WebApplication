@@ -1,27 +1,115 @@
-.section-title{
+/* ===========================
+   HOME PAGE
+=========================== */
 
-    color:var(--primary-green);
-
-    font-weight:bold;
-
-    margin-bottom:30px;
-
-    position:relative;
-
+.home-page {
+    padding: 40px 0 70px;
 }
 
-.section-title::after{
+/* Section Headings */
 
-    content:"";
+.home-section-title {
+    color: var(--primary-green);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 50px 0 25px;
+    text-align: center;
+    position: relative;
+}
 
-    width:90px;
+.home-section-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin: 10px auto 0;
+    border-radius: 20px;
+    background: var(--primary-green);
+}
 
-    height:4px;
+/* Event Card */
 
-    background:var(--gold);
+.event-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,.12);
+    transition: .3s ease;
+}
 
-    display:block;
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,.18);
+}
 
-    margin-top:10px;
+/* Image */
+
+.event-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Badge */
+
+.event-card .badge {
+    background: var(--primary-green) !important;
+    padding: 8px 14px;
+    font-size: .8rem;
+    border-radius: 30px;
+}
+
+/* Title */
+
+.event-card .card-title {
+    color: var(--primary-green);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Description */
+
+.event-card .card-text {
+    color: #666;
+    font-size: .95rem;
+    line-height: 1.6;
+}
+
+/* Details */
+
+.event-details p {
+    margin-bottom: .45rem;
+    font-size: .9rem;
+}
+
+/* Button */
+
+.event-btn {
+    width: 100%;
+    height: 42px;
+    border: none;
+    border-radius: 25px;
+    background: var(--primary-green);
+    color: white;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.event-btn:hover {
+    background: var(--dark-green);
+}
+
+/* Section spacing */
+
+.events-section {
+    margin-top: 50px;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+    .home-section-title{
+        font-size:1.6rem;
+    }
 
 }

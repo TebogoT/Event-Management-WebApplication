@@ -1,19 +1,114 @@
-.dashboard{
+/* ==========================
+   DASHBOARD PAGE
+========================== */
 
-    padding:50px;
-
+.dashboard-page{
+    padding:40px 20px;
+    min-height:100vh;
+    background:#f8f9f5;
 }
 
-.dashboard h1{
+/* ==========================
+   PAGE TITLE
+========================== */
 
+.dashboard-title{
+    text-align:center;
     color:var(--primary-green);
-
+    margin-bottom:30px;
+    font-size:2rem;
     font-weight:bold;
-
 }
 
-.dashboard button{
+/* ==========================
+   ADD EVENT BUTTON
+========================== */
 
-    border-radius:30px;
+.add-event-btn{
+    display:block;
+    margin:0 auto 30px auto;
 
+    background:var(--primary-green);
+    color:white;
+
+    border:none;
+    border-radius:8px;
+
+    padding:10px 25px;
+
+    font-size:16px;
+}
+
+.add-event-btn:hover{
+    background:var(--dark-green);
+}
+
+/* ==========================
+   EVENT LIST
+========================== */
+
+.event-list{
+    margin-top:20px;
+}
+
+/* ==========================
+   NO EVENTS MESSAGE
+========================== */
+
+.no-events{
+    text-align:center;
+    color:#777;
+    font-size:18px;
+    margin-top:40px;
+}
+
+/* ==========================
+   EVENT CARD
+========================== */
+
+.event-card{
+    margin-bottom:20px;
+
+    border:none;
+    border-radius:10px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.event-card .card-title{
+    color:var(--primary-green);
+    font-weight:bold;
+}
+
+.event-card .card-subtitle{
+    color:var(--primary-gold);
+}
+
+.event-card strong{
+    color:var(--primary-green);
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.edit-btn{
+    background:var(--primary-gold);
+    color:black;
+    border:none;
+    margin-right:10px;
+}
+
+.edit-btn:hover{
+    background:#c9a227;
+}
+
+.delete-btn{
+    background:#b02a37;
+    color:white;
+    border:none;
+}
+
+.delete-btn:hover{
+    background:#8c1f2c;
 }
