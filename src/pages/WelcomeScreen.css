@@ -1,20 +1,43 @@
 .welcome-screen{
+
     position:fixed;
-    top:0;
-    left:0;
 
-    width:100%;
-    height:100vh;
+    inset:0;
 
-    background:#0d6efd;
+    background:
+
+    linear-gradient(
+    135deg,
+    var(--dark-green),
+    var(--primary-green)
+    );
 
     color:white;
 
     display:flex;
-    flex-direction:column;
 
     justify-content:center;
+
     align-items:center;
 
+    flex-direction:column;
+
     z-index:9999;
+
+}
+
+.welcome-screen h1{
+
+    font-size:5rem;
+
+    color:var(--gold);
+
+    letter-spacing:5px;
+
+}
+
+.welcome-screen p{
+
+    color:var(--light-gold);
+
 }

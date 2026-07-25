@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet} from "react-router-dom";
 //Imported the useContext to have access to the user
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";

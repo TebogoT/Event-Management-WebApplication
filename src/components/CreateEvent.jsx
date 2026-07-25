@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import { EventContext } from "../context/EventContext";
 
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
+import "./CreateEvent.css"
 
 const CreateEvent = ({onClose, event}) => {
 
@@ -75,10 +76,10 @@ const CreateEvent = ({onClose, event}) => {
 
  //CREATING THE EVENT CARD
   return (
-    <Container className="mt-5">
-        <Row className="justify-content-center">
-            <Col md={8}>
-                <Card>
+    <Container fluid className="event-page mt-5">
+        <Row className="justify-content-center align-items-center h-100">
+            <Col xs={11} sm={10} md={8} lg={6} style={{ maxWidth: '540px' }}>
+                <Card className="login-card">
                     <Card.Body>
                         <Card.Title>
                             {event ? "Edit Event" : "Create Event"}

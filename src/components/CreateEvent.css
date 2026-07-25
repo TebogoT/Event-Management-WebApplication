@@ -1,0 +1,43 @@
+
+
+.card{
+    border:none;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    
+}
+
+.card-title{
+    color:var(--primary-green);
+    font-weight:bold;
+}
+
+.form-control{
+    border-radius:10px;
+    border:1px solid var(--light-gold);
+}
+
+.form-control:focus{
+    border-color:var(--gold);
+    box-shadow:0 0 10px rgba(201,162,39,.3);
+}
+
+.btn-primary{
+    background:var(--primary-green);
+    border:none;
+}
+
+.btn-primary:hover{
+    background:var(--dark-green);
+}
+
+.btn-warning{
+    background:var(--gold);
+    color:black;
+    border:none;
+}
+
+.btn-danger{
+    border-radius:10px;
+
+}

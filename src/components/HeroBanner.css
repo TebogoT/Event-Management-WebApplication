@@ -1,23 +1,68 @@
 .hero-banner{
+
     height:80vh;
 
-    background-image:
-        linear-gradient(
-            rgba(0,0,0,0.55),
-            rgba(0,0,0,0.55)
-        ),
-        url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30");
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.55)
+    ),
+
+    url("/hero.jpg");
 
     background-size:cover;
+
     background-position:center;
-    background-repeat:no-repeat;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
 }
 
 .hero-banner h1{
-    font-weight:700;
+
+    font-size:4rem;
+
+    color:var(--gold);
+
 }
 
 .hero-banner p{
+
+    font-size:1.3rem;
+
     max-width:700px;
+
     margin:auto;
+
+}
+
+.hero-banner .btn{
+
+    background:var(--gold);
+
+    border:none;
+
+    color:black;
+
+    padding:15px 35px;
+
+    font-weight:600;
+
+    border-radius:40px;
+
+}
+
+.hero-banner .btn:hover{
+
+    background:#b48b12;
+
 }

@@ -1,0 +1,19 @@
+.dashboard{
+
+    padding:50px;
+
+}
+
+.dashboard h1{
+
+    color:var(--primary-green);
+
+    font-weight:bold;
+
+}
+
+.dashboard button{
+
+    border-radius:30px;
+
+}

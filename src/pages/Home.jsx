@@ -4,9 +4,21 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useContext } from "react";
 import { EventContext } from "../context/EventContext";
 import HeroBanner from "../components/HeroBanner";
+import "./Home.css";
 
 const Home = () => {
+
   const { events } = useContext(EventContext);
+
+  const popularEvents = events.filter(
+      event => event.category === "Popular"
+  );
+
+  const upcomingEvents = events.filter(
+      event => event.category === "Upcoming"
+  );
+
+
   return (
     <Container>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Badge, Button } from "react-bootstrap";
 
-const PublicEventCard = ({ event }) => {
+const PublicEvents = ({ event }) => {
     return (
         <Card className="shadow-sm h-100">
             {/* Event Image */}
@@ -58,4 +58,4 @@ const PublicEventCard = ({ event }) => {
     );
 };
 
-export default PublicEventCard;
+export default PublicEvents;

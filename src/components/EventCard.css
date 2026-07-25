@@ -1,0 +1,41 @@
+.event-card{
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.event-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.event-card img{
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.event-card h3{
+
+    color:var(--primary-green);
+
+}
+
+.event-card .badge{
+
+    background:var(--gold);
+
+    color:black;
+
+}

@@ -1,43 +1,106 @@
-import React from "react"
-import { NavLink } from "react-router-dom"
-import { useContext } from "react"
-import {UserContext} from "../context/UserContext"
-import './NavigationBar.css'
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
+import { UserContext } from "../context/UserContext";
+
+import {
+    Navbar,
+    Nav,
+    Container,
+    Button
+} from "react-bootstrap";
+
+import "./NavigationBar.css";
 
 
 const NavigationBar = () => {
 
+    const { user, logout } = useContext(UserContext);
 
-    // RENDER THE NAVIGATION BAR WITH LINKS TO HOME, PRODUCTS, AND ABOUT US PAGES
     return (
-        <div className="navigationBar">
-            <nav>
-                <ul>
-                    <li>
-                        <NavLink to="/" className="navLink">Home</NavLink>
+        <Navbar
+            expand="lg"
+            className="navigation-bar"
+            sticky="top"
+        >
+            <Container>
 
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard" className="navLink">Dashboard</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/about" className="navLink">About US</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/contact" className="navLink">Contact US</NavLink>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <NavLink to="/login" className="navLink">Login</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/register" className="navLink">Register</NavLink>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    )
-}
+                {/* Logo */}
+                <Navbar.Brand
+                    as={NavLink}
+                    to="/"
+                    className="brand-name"
+                >
+                    EventHub
+                </Navbar.Brand>
 
-export default NavigationBar
+                {/* Mobile Menu Button */}
+                <Navbar.Toggle aria-controls="main-navbar" />
+
+                <Navbar.Collapse id="main-navbar">
+
+                    {/* Left Navigation */}
+                    <Nav className="me-auto">
+
+                        <Nav.Link as={NavLink} to="/">
+                            Home
+                        </Nav.Link>
+
+                        <Nav.Link as={NavLink} to="/dashboard">
+                            Dashboard
+                        </Nav.Link>
+
+                        <Nav.Link as={NavLink} to="/about">
+                            About Us
+                        </Nav.Link>
+
+                        <Nav.Link as={NavLink} to="/contact">
+                            Contact Us
+                        </Nav.Link>
+
+                    </Nav>
+
+                    {/* Right Navigation */}
+                    <Nav>
+
+                        {!user ? (
+                            <>
+                                <Nav.Link as={NavLink} to="/login">
+                                    Login
+                                </Nav.Link>
+
+                                <Button
+                                    as={NavLink}
+                                    to="/register"
+                                    variant="success"
+                                    className="ms-2"
+                                >
+                                    Register
+                                </Button>
+                            </>
+                        ) : (
+                            <>
+                                <Navbar.Text className="me-3">
+                                    Welcome, {user.fullName}
+                                </Navbar.Text>
+
+                                <Button
+                                    as = {NavLink}
+                                    to="/home"
+                                    variant="outline-light"
+                                    onClick={logout}
+                                >
+                                    Logout
+                                </Button>
+                            </>
+                        )}
+
+                    </Nav>
+
+                </Navbar.Collapse>
+
+            </Container>
+        </Navbar>
+    );
+};
+
+export default NavigationBar;

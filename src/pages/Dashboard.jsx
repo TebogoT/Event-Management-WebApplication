@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { EventContext } from "../context/EventContext";
 import CreateEvent from "../components/CreateEvent";
 import EventCard from "../components/EventCard";
+import "./Dashboard.css";
 
 
 const Dashboard = () => {

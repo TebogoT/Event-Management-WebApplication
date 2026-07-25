@@ -88,119 +88,117 @@ const Register = () => {
   });
 
   return (
-    <div>
-      <Container className="login-page">
-        <Row className="justify-content-center">
-          <Col md={6}>
-            <Card className="login-card">
-              <Card.Body>
-                <Card.Title>Register</Card.Title>
-                <Form onSubmit={formik.handleSubmit}>
+    <Container fluid className="login-page">
+      <Row>
+        <Col xs={11} sm={9} md={7} lg={6} style={{ maxWidth: '540px' }}>
+          <Card className="login-card">
+            <Card.Body>
+              <Card.Title className="mb-4">Register</Card.Title>
+              <Form onSubmit={formik.handleSubmit}>
 
-                  {/* FULL NAME INPUT FIELD */}
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Full Name:</Form.Label>
-                    <Form.Control 
-                      type="text" 
-                      id="fullName" 
-                      name="fullName" 
-                      value={formik.values.fullName} 
-                      onChange={formik.handleChange} 
-                      onBlur={formik.handleBlur} 
-                      isInvalid={formik.touched.fullName && !!formik.errors.fullName}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {formik.errors.fullName}
-                    </Form.Control.Feedback>
-                  </Form.Group>
+                {/* FULL NAME INPUT FIELD */}
+                <Form.Group className="mb-3">
+                  <Form.Label>Full Name:</Form.Label>
+                  <Form.Control 
+                    type="text" 
+                    id="fullName" 
+                    name="fullName" 
+                    value={formik.values.fullName} 
+                    onChange={formik.handleChange} 
+                    onBlur={formik.handleBlur} 
+                    isInvalid={formik.touched.fullName && !!formik.errors.fullName}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {formik.errors.fullName}
+                  </Form.Control.Feedback>
+                </Form.Group>
 
-                  {/* SURNAME INPUT FIELD*/}
-                  <Form.Group className="mb-3" controlId="formBasicSurname">
-                    <Form.Label>Surname:</Form.Label>
-                    <Form.Control 
-                      type="text" 
-                      id="surname" 
-                      name="surname" 
-                      value={formik.values.surname} 
-                      onChange={formik.handleChange} 
-                      onBlur={formik.handleBlur} 
-                      isInvalid={formik.touched.surname && !!formik.errors.surname}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {formik.errors.surname}
-                    </Form.Control.Feedback>
-                  </Form.Group>
+                {/* SURNAME INPUT FIELD*/}
+                <Form.Group className="mb-3">
+                  <Form.Label>Surname:</Form.Label>
+                  <Form.Control 
+                    type="text" 
+                    id="surname" 
+                    name="surname" 
+                    value={formik.values.surname} 
+                    onChange={formik.handleChange} 
+                    onBlur={formik.handleBlur} 
+                    isInvalid={formik.touched.surname && !!formik.errors.surname}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {formik.errors.surname}
+                  </Form.Control.Feedback>
+                </Form.Group>
 
-                  {/* EMAIL INPUT FIELD */}
-                  <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email:</Form.Label>
-                    <Form.Control
-                      type="email" 
-                      id="email" 
-                      name="email" 
-                      value={formik.values.email} 
-                      onChange={formik.handleChange} 
-                      onBlur={formik.handleBlur} 
-                      isInvalid={formik.touched.email && !!formik.errors.email}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {formik.errors.email}
-                    </Form.Control.Feedback>
-                  </Form.Group>
+                {/* EMAIL INPUT FIELD */}
+                <Form.Group className="mb-3">
+                  <Form.Label>Email:</Form.Label>
+                  <Form.Control
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    value={formik.values.email} 
+                    onChange={formik.handleChange} 
+                    onBlur={formik.handleBlur} 
+                    isInvalid={formik.touched.email && !!formik.errors.email}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {formik.errors.email}
+                  </Form.Control.Feedback>
+                </Form.Group>
 
-                  {/* PASSWORD INPUT FIELD */}
-                  <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password:</Form.Label>
-                    <Form.Control 
-                      type="password" 
-                      id="password" 
-                      name="password" 
-                      value={formik.values.password} 
-                      onChange={formik.handleChange} 
-                      onBlur={formik.handleBlur} 
-                      isInvalid={formik.touched.password && !!formik.errors.password} 
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {formik.errors.password}
-                    </Form.Control.Feedback>
-                  </Form.Group>
+                {/* PASSWORD INPUT FIELD */}
+                <Form.Group className="mb-3">
+                  <Form.Label>Password:</Form.Label>
+                  <Form.Control 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    value={formik.values.password} 
+                    onChange={formik.handleChange} 
+                    onBlur={formik.handleBlur} 
+                    isInvalid={formik.touched.password && !!formik.errors.password} 
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {formik.errors.password}
+                  </Form.Control.Feedback>
+                </Form.Group>
 
 
-                  {/* CONFIRM PASSWORD INPUT FIELD */}
-                  <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
-                    <Form.Label>Confirm Password:</Form.Label>
-                    <Form.Control
-                      type="password"
-                      id="confirmPassword"
-                      name="confirmPassword"
-                      value={formik.values.confirmPassword}
-                      onChange={formik.handleChange}
-                      onBlur={formik.handleBlur}
-                      isInvalid={formik.touched.confirmPassword && !!formik.errors.confirmPassword}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      {formik.errors.confirmPassword}
-                    </Form.Control.Feedback>
-                  </Form.Group>
-                  
-                  {/*SUBMIT BUTTON*/}
-                  <Button
-                    type="submit"
-                    variant="primary"
-                    className="w-100 mt-3 login-button"
-                  >
-                    Register
-                  </Button>
-                  <p className="mt-3 text-center">
-                    Already have an account? <Link to="/login">Login here</Link>
-                  </p>
-                </Form>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+                {/* CONFIRM PASSWORD INPUT FIELD */}
+                <Form.Group className="mb-3">
+                  <Form.Label>Confirm Password:</Form.Label>
+                  <Form.Control
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    value={formik.values.confirmPassword}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    isInvalid={formik.touched.confirmPassword && !!formik.errors.confirmPassword}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {formik.errors.confirmPassword}
+                  </Form.Control.Feedback>
+                </Form.Group>
+                
+                {/*SUBMIT BUTTON*/}
+                <Button
+                  type="submit"
+                  variant="primary"
+                  className="login-button mt-2"
+                >
+                  Register
+                </Button>
+                <p className="text-center mt-3">
+                  Already have an account? <Link to="/login">Login here</Link>
+                </p>
+              </Form>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 
