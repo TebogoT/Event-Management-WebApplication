@@ -1,10 +1,10 @@
 .login-page {
   min-height: calc(100vh - 76px);
-  display: flex !important; /* Forces layout context */
+  display: flex !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw; /* Prevents horizontal collapse */
+  width: 100vw; 
   box-sizing: border-box;
 }
 

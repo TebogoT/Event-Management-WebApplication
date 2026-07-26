@@ -11,7 +11,7 @@ const Home = () => {
 
         <HeroBanner />
 
-
+        {/*NEW EVENTS SECTION */}
         <div>
             <h2 className="home-section-title">New Events</h2>
             <Row className="g-4">
@@ -29,6 +29,7 @@ const Home = () => {
             </Row>
         </div>
 
+        {/*POPULAR EVENTS SECTION */}
         <div>
             <h2 className="home-section-title">Popular Events</h2>
             <Row className="g-4">
@@ -45,6 +46,8 @@ const Home = () => {
                 </Col>
             </Row>
         </div>
+
+        {/*OTHER EVENTS SECTION */}
         <div>
             <h2 className="home-section-title">Events Near You</h2>
             <Row className="g-4">

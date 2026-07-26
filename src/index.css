@@ -1,5 +1,4 @@
 :root{
-
     --primary-green:#0F5E4B;
     --dark-green:#083D31;
     --gold:#C9A227;
@@ -7,28 +6,19 @@
     --background:#F8F7F3;
     --white:#FFFFFF;
     --text:#2C2C2C;
-
 }
 
 body{
-
     background:var(--background);
-
     color:var(--text);
-
     font-family:"Poppins",sans-serif;
-
 }
 
 a{
-
     text-decoration:none;
-
 }
 
 button{
-
     transition:.3s;
-
 }
 

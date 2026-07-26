@@ -38,9 +38,8 @@ const NavigationBar = () => {
 
                 <Navbar.Collapse id="main-navbar">
 
-                    {/* Left Navigation */}
+                    {/* Navigation on the left side of the screen */}
                     <Nav className="me-auto">
-
                         <Nav.Link as={NavLink} to="/">
                             Home
                         </Nav.Link>
@@ -60,10 +59,9 @@ const NavigationBar = () => {
                         <Nav.Link as={NavLink} to="/help">
                             Help
                         </Nav.Link>
-
                     </Nav>
 
-                    {/* Right Navigation */}
+                    {/* Navigation on the right side of the screen */}
                     <Nav>
 
                         {!user ? (
@@ -97,11 +95,8 @@ const NavigationBar = () => {
                                 </Button>
                             </>
                         )}
-
                     </Nav>
-
                 </Navbar.Collapse>
-
             </Container>
         </Navbar>
     );

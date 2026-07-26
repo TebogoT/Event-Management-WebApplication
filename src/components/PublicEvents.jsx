@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, Badge, Button } from "react-bootstrap";
 
+
+//TYPICAL EVENT CARD WHICH WILL BE VISIBLE ON HTE HOME SCREEN
 const PublicEvents = () => {
   const event = {
     title: "Winter Festival",

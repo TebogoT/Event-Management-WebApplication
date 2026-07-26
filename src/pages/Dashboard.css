@@ -1,6 +1,4 @@
-/* ==========================
-   DASHBOARD PAGE
-========================== */
+/* DASHBOARD PAGE */
 
 .dashboard-page{
     padding:40px 20px;
@@ -8,9 +6,7 @@
     background:#f8f9f5;
 }
 
-/* ==========================
-   PAGE TITLE
-========================== */
+/* PAGE TITLE */
 
 .dashboard-title{
     text-align:center;
@@ -20,9 +16,7 @@
     font-weight:bold;
 }
 
-/* ==========================
-   ADD EVENT BUTTON
-========================== */
+/* ADD EVENT BUTTON */
 
 .add-event-btn{
     display:block;
@@ -43,17 +37,13 @@
     background:var(--dark-green);
 }
 
-/* ==========================
-   EVENT LIST
-========================== */
+/* EVENT LIST */
 
 .event-list{
     margin-top:20px;
 }
 
-/* ==========================
-   NO EVENTS MESSAGE
-========================== */
+/*  NO EVENTS MESSAGE */
 
 .no-events{
     text-align:center;
@@ -62,9 +52,7 @@
     margin-top:40px;
 }
 
-/* ==========================
-   EVENT CARD
-========================== */
+/* EVENT CARD */
 
 .event-card{
     margin-bottom:20px;
@@ -88,9 +76,7 @@
     color:var(--primary-green);
 }
 
-/* ==========================
-   BUTTONS
-========================== */
+/* BUTTONS */
 
 .edit-btn{
     background:var(--primary-gold);

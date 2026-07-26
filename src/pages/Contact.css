@@ -1,47 +1,29 @@
 .contact-page{
-
     padding:40px 20px;
-
 }
 
 .contact-page h1{
-
     color:var(--primary-green);
-
 }
 
 .contact-page p{
-
     color:#666;
-
 }
 
 .contact-card{
-
     border:none;
-
     border-radius:10px;
-
     padding:20px;
-
     box-shadow:0 5px 15px rgba(0,0,0,.1);
-
 }
 
 .contact-button{
-
     width:100%;
-
     border:none;
-
     background:var(--primary-green);
-
     color:white;
-
 }
 
 .contact-button:hover{
-
     background:var(--dark-green);
-
 }

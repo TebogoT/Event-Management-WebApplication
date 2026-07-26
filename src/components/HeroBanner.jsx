@@ -14,17 +14,9 @@ const HeroBanner = () => {
                 </h1>
 
                 <p className="lead mt-3">
-                    Find conferences, meetings, weddings, birthdays and
+                    Organize and find conferences, meetings, weddings, birthdays and
                     community events happening near you.
                 </p>
-
-                <Button
-                    variant="primary"
-                    size="lg"
-                    className="mt-3"
-                >
-                    Explore Events
-                </Button>
 
             </Container>
         </div>

@@ -21,7 +21,7 @@ const WelcomeScreen = () => {
     return (
         <div className="welcome-screen">
             <h1>EVENTIFY</h1>
-            <p>Discover Amazing Events</p>
+            <p>Discover and plan Amazing Events</p>
         </div>
     );
 };

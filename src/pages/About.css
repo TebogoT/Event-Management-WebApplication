@@ -1,51 +1,32 @@
 .about-page{
-
     padding:40px 20px;
-
 }
 
 .about-page h1{
-
     color:var(--primary-green);
-
     margin-bottom:15px;
-
 }
 
 .about-page p{
-
     color:#666;
-
 }
 
 .about-card{
-
     border:none;
-
     border-radius:10px;
-
     box-shadow:0 5px 15px rgba(0,0,0,.1);
-
 }
 
 .about-card .card-body{
-
     padding:20px;
-
 }
 
 .about-card .card-title{
-
     color:var(--primary-gold);
-
     margin-bottom:15px;
-
 }
 
 .about-card:hover{
-
     transform:translateY(-5px);
-
     transition:.3s;
-
 }
