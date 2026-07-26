@@ -1,16 +1,55 @@
-# React + Vite
+# Event Planner App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This is my React Capstone Project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The Event Planner App is a web application that helps users organise their events. Users can create an account, log in, add events, edit events and delete events. I built this project using React and Vite to practise what I have learned.
 
-## React Compiler
+## Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Clone the repository:
 
-## Expanding the ESLint configuration
+```bash
+git clone https://github.com/TebogoT/Event-Management-WebApplication.git
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Go into the project folder:
+
+```bash
+cd event-planner
+```
+
+Install the project dependencies:
+
+```bash
+npm install
+```
+
+## Running the App
+
+Start the development server by running:
+
+```bash
+npm run dev
+```
+
+Then open your browser and go to:
+
+```text
+http://localhost:5173
+```
+
+## Technologies Used
+
+* React
+* Vite
+* JavaScript
+* React Router
+* React Bootstrap
+* CSS
+
+## Author
+
+Tebogo Mola
+
