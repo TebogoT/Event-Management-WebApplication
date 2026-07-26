@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, Accordion } from "react-bootstrap";
-import "./help.css";
+import "./Help.css";
 
 const Help = () => {
 
