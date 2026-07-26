@@ -4,7 +4,7 @@
 
 This is my React Capstone Project.
 
-The Event Planner App is a web application that helps users organise their events. Users can create an account, log in, add events, edit events and delete events. I built this project using React and Vite to practise what I have learned.
+The Event Planner App is a web application that helps users organise their events. Users can create an account, log in, add events, edit events and delete events and besides that guest users can view upcoming events as well. I built this project using React and Vite to practise what I have learned.
 
 ## Installation
 
@@ -51,5 +51,5 @@ http://localhost:5173
 
 ## Author
 
-Tebogo Mola
+Mathaba Tebogo Mola
 
