@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 //CREATECONTEXT CREATES SHARED STORAGE SPACE AND STATE IS CURRENT STTE OF DATA 
 import { createContext, useState, useEffect } from "react";
 

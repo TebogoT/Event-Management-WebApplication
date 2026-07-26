@@ -1,10 +1,10 @@
-import React from 'react'
-import {useContext} from 'react'
-import { UserContext } from '../context/UserContext.jsx'
-import { useNavigate, Link } from 'react-router-dom'
-import { useFormik } from 'formik'
-import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap'
-import './login.css'
+import React from 'react';
+import {useContext} from 'react';
+import { UserContext } from '../context/UserContext.jsx';
+import { useNavigate, Link } from 'react-router-dom';
+import { useFormik } from 'formik';
+import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
+import './login.css';
 
 
 const Register = () => {

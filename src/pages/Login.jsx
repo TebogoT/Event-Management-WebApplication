@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { useContext, useState } from 'react';
 import { UserContext } from '../context/UserContext';
-import { useNavigate, Link } from 'react-router-dom'
-import { useFormik } from 'formik'
-import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap'
-import './login.css'
+import { useNavigate, Link } from 'react-router-dom';
+import { useFormik } from 'formik';
+import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
+import './login.css';
 
 
 const Login = () => {

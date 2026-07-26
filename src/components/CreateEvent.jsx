@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { useContext } from "react";
 import { useFormik } from "formik";
 import { EventContext } from "../context/EventContext";
 
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
-import "./CreateEvent.css"
+import "./CreateEvent.css";
 
 const CreateEvent = ({onClose, event}) => {
 

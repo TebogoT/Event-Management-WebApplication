@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react'
+import React from 'react';
 
 //PAGES IMPORTS
 import WelcomeScreen from "./pages/WelcomeScreen";
@@ -9,7 +9,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
-import Contact from "./pages/Contact"
+import Contact from "./pages/Contact";
 import NavigationBar from "./components/NavigationBar";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Help from "./pages/Help";
