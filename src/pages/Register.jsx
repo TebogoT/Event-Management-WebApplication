@@ -71,6 +71,8 @@ const Register = () => {
     onSubmit: (values) => {
 
       const userData = {
+        id: Date.now(),
+
         fullName: values.fullName.trim(),
         surname: values.surname.trim(),
         email: values.email.trim(),
