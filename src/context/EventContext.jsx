@@ -52,16 +52,13 @@ export function EventProvider({ children }) {
 
     }
 
-     //FUNCTION TO ADD A NEW EVENT
+     //FUNCTION TO DELETE A NEW EVENT
      //filter by "id"
     function deleteEvent(id) {
         setEvents(previousEvents =>
-            previousEvents.filter(event => {
-                if (event.id !== id) {
-                    return true;
-                }
-                return event.userId === user.id;
-            })
+            previousEvents.filter(
+                event => !(event.id === id && event.userId === user.id)
+            )
         );
     }
 
